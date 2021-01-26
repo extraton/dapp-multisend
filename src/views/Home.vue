@@ -1,18 +1,38 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <confirm-payees v-if="payees.length>0" @canceled="refreshPayees" :payees="payees" :total="total"/>
+    <add-payees v-else @created="refreshPayees"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import AddPayees from "@/components/AddPayees";
+import ConfirmPayees from "@/components/ConfirmPayees";
+import BigNumber from 'bignumber.js';
+import {payeeRepository} from "@/db/repository/payeeRepository";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+  components: {AddPayees, ConfirmPayees},
+  data: () => ({
+    total: '0',
+    payees: [],
+  }),
+  mounted() {
+    this.refreshPayees();
+  },
+  methods: {
+    async refreshPayees() {
+      this.payees = await payeeRepository.getAll();
+      let total = new BigNumber('0');
+      for (let payee of this.payees) {
+        total = total.plus(new BigNumber(payee.amount));
+      }
+      this.total = total.toString();
+    }
+  },
 }
 </script>
+<style lang="scss">
+.home {
+}
+</style>

@@ -1,24 +1,9 @@
-# dapp-multisend
+# DApp ExtraTON.Multisend
 
-## Project setup
-```
-yarn install
-```
+[multisend.extraton.io](https://multisend.extraton.io/)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## About 
+ExtraTON.Multisend is decentralized application (DApp) made by extraton.io team.  
+The DApp helps you easily and securely make multi sends in FreeTON network.  
+It's non-commercial, [open-source](https://github.com/extraton/dapp-multisend) project.  
+In order to use DApp install [extraTON extension](https://chrome.google.com/webstore/detail/extraton/hhimbkmlnofjdajamcojlcmgialocllm) to your Google Chrome browser.  

@@ -1,0 +1,104 @@
+{
+  "type": "Contract",
+  "value": {
+    "ABI version": 2,
+    "header": [
+      "time"
+    ],
+    "functions": [
+      {
+        "name": "constructor",
+        "inputs": [
+          {
+            "name": "addresses",
+            "type": "address[]"
+          },
+          {
+            "name": "amounts",
+            "type": "uint128[]"
+          },
+          {
+            "name": "refundAddr",
+            "type": "address"
+          }
+        ],
+        "outputs": [
+        ]
+      },
+      {
+        "name": "getData",
+        "inputs": [
+        ],
+        "outputs": [
+          {
+            "components": [
+              {
+                "name": "addresses",
+                "type": "address[]"
+              },
+              {
+                "name": "amounts",
+                "type": "uint128[]"
+              },
+              {
+                "name": "total",
+                "type": "uint128"
+              },
+              {
+                "name": "refundAddr",
+                "type": "address"
+              },
+              {
+                "name": "destroyLockTs",
+                "type": "uint64"
+              }
+            ],
+            "name": "value0",
+            "type": "tuple"
+          }
+        ]
+      },
+      {
+        "name": "sendAndDestroy",
+        "inputs": [
+        ],
+        "outputs": [
+        ]
+      },
+      {
+        "name": "destroy",
+        "inputs": [
+        ],
+        "outputs": [
+        ]
+      },
+      {
+        "name": "replenish",
+        "inputs": [
+        ],
+        "outputs": [
+        ]
+      },
+      {
+        "name": "rand",
+        "inputs": [
+        ],
+        "outputs": [
+          {
+            "name": "rand",
+            "type": "uint256"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "key": 1,
+        "name": "rand",
+        "type": "uint256"
+      }
+    ],
+    "events": [
+    ]
+  }
+}
