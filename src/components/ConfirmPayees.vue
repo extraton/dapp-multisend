@@ -48,7 +48,7 @@ export default {
     isConfirming: false,
     rules: {
       required: value => !!value || 'Required.',
-      address: value => /^0:[a-f0-9]{64}$/i.test(value) || 'Incorrect address.',
+      address: value => /^-?[0-9]:[a-f0-9]{64}$/i.test(value) || 'Incorrect address.',
     },
     refundAddress: '',
     valid: true,

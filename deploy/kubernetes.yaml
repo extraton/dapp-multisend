@@ -28,7 +28,7 @@ spec:
         spec:
             containers:
                 -   name: dapp-multisend-nginx
-                    image: docker.pkg.github.com/extraton/dapp-multisend/dapp-multisend-nginx:0.1
+                    image: docker.pkg.github.com/extraton/dapp-multisend/dapp-multisend-nginx:0.1.2
                     ports: [{containerPort: 80}]
             imagePullSecrets:
                 -   name: github-registry

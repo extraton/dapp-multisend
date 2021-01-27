@@ -44,7 +44,7 @@ export default {
   data: () => ({
     rules: {
       required: value => !!value || 'Required.',
-      address: value => /^0:[a-f0-9]{64}$/i.test(value) || 'Incorrect address.',
+      address: value => /^-?[0-9]:[a-f0-9]{64}$/i.test(value) || 'Incorrect address.',
       positive: value => (new BigNumber(value)).isGreaterThan(new BigNumber(0)) || 'Should be positive value.',
       max: value => (new BigNumber(value)).isLessThanOrEqualTo(new BigNumber('1000000000')) || 'Too big.',
       precision: value => (new BigNumber(value)).dp() < 10 || 'Max decimal places is 9.',
