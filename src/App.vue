@@ -1,45 +1,17 @@
 <template>
   <v-app>
     <v-snackbar v-model="snack.isShow">{{ snack.text }}</v-snackbar>
-    <install-extension-dialog/>
-    <div>
-      <v-app-bar>
-        <v-icon left>mdi-diamond-stone</v-icon>
-        <v-toolbar-title>extraTON.Multisend</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-btn href="https://t.me/extraton" target="_blank" text outlined>
-          <v-icon left>mdi-telegram</v-icon>
-          <span>Support</span>
-        </v-btn>
-        <template v-slot:extension>
-          <v-tabs align-with-title>
-            <v-tabs-slider color="#272727"/>
-            <v-tab :to="{name: 'main'}" exact>Home</v-tab>
-            <v-tab :to="{name: 'about'}">About</v-tab>
-            <v-spacer/>
-            <div class="alsoTry align-center">
-              <span class="text--primary subtitle-1">Also try:</span>
-              <a :href="alsoTryRandom.url" target="_blank" class="alsoTry__link">
-                {{ alsoTryRandom.name }}
-              </a>
-            </div>
-          </v-tabs>
-        </template>
-      </v-app-bar>
-    </div>
-
-    <v-main>
-      <v-container>
-        <router-view/>
-      </v-container>
-    </v-main>
+    <v-container>
+      <v-alert type="error">
+        Project Closed!
+        <br/>See details in official <a href="https://extraton.io" target="_blank">site</a>.
+      </v-alert>
+    </v-container>
   </v-app>
 </template>
 
 <script>
-import InstallExtensionDialog from "@/components/InstallExtensionDialog";
 export default {
-  components: {InstallExtensionDialog},
   data: () => ({
     snack: {isShow: false, text: ''},
     alsoTry: [
