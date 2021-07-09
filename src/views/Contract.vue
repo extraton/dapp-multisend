@@ -96,9 +96,9 @@ export default {
   computed: {
     explorer() {
       switch (this.$route.params.server) {
-        case 'main.ton.dev':
+        case 'main2.ton.dev':
           return 'ton.live';
-        case 'net.ton.dev':
+        case 'net1.ton.dev':
           return 'net.ton.live';
         default:
           throw {text: 'Unknown Network'};

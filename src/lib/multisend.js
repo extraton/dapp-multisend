@@ -39,10 +39,10 @@ export default {
     const network = await provider.getNetwork();
     let neededNetworkId;
     switch (server) {
-      case 'main.ton.dev':
+      case 'main2.ton.dev':
         neededNetworkId = 1;
         break;
-      case 'net.ton.dev':
+      case 'net1.ton.dev':
         neededNetworkId = 2;
         break;
       default:

@@ -90,9 +90,9 @@ export default {
     getServer(network) {
       switch (network.id) {
         case 1:
-          return 'main.ton.dev';
+          return 'main2.ton.dev';
         case 2:
-          return 'net.ton.dev';
+          return 'net1.ton.dev';
         default:
           throw {text: 'Unknown Network'};
       }
